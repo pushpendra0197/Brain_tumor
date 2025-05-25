@@ -27,7 +27,7 @@ upload=st.file_uploader("Upload Image of Mri",["jpg", "jpeg", "png"])
 button=st.button("Predict")
 if button:
     if upload is not None:
-      image=cv2.imread(upload)
+      image=cv2.imread(r"upload")
       resize_image=(cv2.resize(image,dsize=(256,256),interpolation=cv2.INTER_AREA))
       final_image=np.expand_dims(resize_image,axis=0)
       Model= tensorflow.keras.models.load_model(r"Braintumor.keras")
