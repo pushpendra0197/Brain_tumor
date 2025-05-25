@@ -1,4 +1,4 @@
 tensorflow
 matplotlib
-opencv-python==4.11
+opencv-python==4.0
 
