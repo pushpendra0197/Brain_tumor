@@ -23,7 +23,7 @@ background-position:center;
 <style>
 """
 st.markdown(page_element,unsafe_allow_html=True)
-upload=st.file_uploader("Upload Image of Mri",["jpg", "jpeg", "png"])
+upload=st.file_uploader("Upload Image of Mri")
 button=st.button("Predict")
 if button:
     if upload is not None:
