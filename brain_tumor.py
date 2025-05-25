@@ -3,6 +3,7 @@ import pandas as pd
 import streamlit as st
 from tensorflow.python.keras.models import load_model
 import matplotlib.pyplot as plt
+import tensorflow
 from PIL import Image
 import base64
 st.set_page_config(page_title="Brain Tumor Detector",page_icon=r"images.png")
