@@ -5,7 +5,6 @@ from tensorflow.python.keras.models import load_model
 import matplotlib.pyplot as plt
 from PIL import Image
 import base64
-import cv2 
 st.set_page_config(page_title="Brain Tumor Detector",page_icon=r"images.png")
 path=(r"image.png")
 with open(path,"rb") as file:
@@ -33,4 +32,5 @@ if button:
       prediction=Model.predict(final_image)
       class_name=['Glioma', 'Healthy', 'Meningioma', 'Pituitary']
       output=class_name[np.argmax(prediction)]
+      st.image(image)
       st.header(output,divider="rainbow")
