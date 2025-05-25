@@ -1,4 +1,4 @@
-import numpy  as np
++import numpy  as np
 import pandas as pd
 import streamlit as st
 from tensorflow.python.keras.models import load_model
@@ -28,8 +28,7 @@ button=st.button("Predict")
 if button:
     if upload is not None:
       image=Image.open(upload)
-      Image=np.array(image)
-      resize_image=(cv2.resize(Image,dsize=(256,256),interpolation=cv2.INTER_AREA))
+      resize_image=image.resize((256,256))
       final_image=np.expand_dims(resize_image,axis=0)
       Model= tensorflow.keras.models.load_model(r"Braintumor.keras")
       prediction=Model.predict(final_image)
