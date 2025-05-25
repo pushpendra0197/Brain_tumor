@@ -28,7 +28,7 @@ button=st.button("Predict")
 if button:
     if upload is not None:
       image=Image.open(upload)
-      resize_image=image.resize((256,256))
+      resize_image=image.resize((256,256,3))
       final_image=np.expand_dims(resize_image,axis=0)
       Model= tensorflow.keras.models.load_model(r"Braintumor.keras")
       prediction=Model.predict(final_image)
