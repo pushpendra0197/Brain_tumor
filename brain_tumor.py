@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import tensorflow
 from PIL import Image
 import base64
-import cv2
 st.set_page_config(page_title="Brain Tumor Detector",page_icon=r"images.png")
 path=(r"image.png")
 with open(path,"rb") as file:
